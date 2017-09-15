@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
+  },
+  "devDependencies": {
+    "@storybook/cli": "3.2.9",
+    "@storybook/react": "3.2.8",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-istanbul": "4.1.4",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-register": "6.26.0",
+    "codecov": "2.3.0",
+    "nyc": "11.2.1",
+    "webpack": "3.6.0",
+    "webpack-dev-server": "2.8.2"
+  },
+  "scripts": {
+    "build-storybook": "build-storybook",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "storybook": "start-storybook -p 9999",
+    "test": "nyc babel-node ./stories/index.js"
+  },
+  "babel": {
+    "presets": ["es2015"],
+    "plugins": ["istanbul"]
+  },
+  "nyc": {
+    "require": ["babel-register"],
+    "sourceMap": false,
+    "instrument": false
+  }
+}
