@@ -22,7 +22,7 @@
     "build-storybook": "build-storybook",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "storybook": "start-storybook -p 9999",
-    "test": "nyc babel-node ./stories/index.js"
+    "test": "nyc babel-node main.js"
   },
   "babel": {
     "presets": ["es2015"],
