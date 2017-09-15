@@ -11,8 +11,8 @@ const Text = ({ children, text }) => {
 };
 
 const sayHey = () => Text({ text: "hey" });
-const render = dom => renderToString(dom());
+// const render = dom => renderToString(dom());
 
-render(sayHey);
+// render(sayHey);
 
 storiesOf("Text", module).add("can say hello", sayHey);
